@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            width: 80%;
+            height: 90%;
+            margin: auto;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        form{
+            padding-top: 5px;
+        }
+
+        #name,#email,#comment,#submit, h4, h1, .cont_logo {
+            margin-left: 10px;
+            border: 0px;
+        }
+
+        #name,#email,#submit{
+            height: 20px;
+        }
+
+
+        .main{
+            position: relative;
+            background-color: #e4e4e4;
+            border-radius: 10px;
+        }
+
+        #header{
+            background-color: #1da1f2;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+        h4{
+            margin-bottom: 5px;
+            padding: 0px;
+        }
+        .nav_sec{
+            position: absolute;
+            height: 200px;
+            width: 250px;
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+            bottom: 120px;
+            left: 500px;
+            clear: both;
+            background-color: white;
+            box-shadow: 3px 3px #e4e4e4;
+            font-size: 12px;
+            color: black;
+            border-radius: 2px;
+        }
+
+        .nav_sec::shadow{
+            border-radius: 2px;
+        }
+
+        #name, #email, #comment{
+            width: 300px;
+            font-family: monospace;
+        }
+
+        img{
+            writing-mode: horizontal-tb;
+            padding: 0px;
+            margin-top: 170px;
+        }
+
+        button{
+            background-color: #1da1f2;
+            cursor: pointer;
+            border: 1px solid white;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            border-radius: 20px;
+            height: 35px;
+            width: 80px;
+        }
+
+        ::placeholder{
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        
+    </style>
+    <title>Contact Us</title>
+</head>
+<body>
+    
+    <div class="main">
+        <main>
+            <form action="" method="get">
+                <table>
+                    <tr>
+                        <td><input name="name" id="name" type="text" placeholder="Enter Your Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input name= "email" id="email" type="email" placeholder="Enter a valid email address"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="comment" id="comment" cols="21" rows="10" placeholder="Enter your message"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button name="submit" id="submit">Submit</button></td>
+                    </tr>
+                </table>
+            </form>
+
+            <div id="header">
+               <header>
+                    <h1>GET IN TOUCH</h1>
+                    <h4>Hey! We are looking  forward <br> to start a project with you!</h4>
+                </header>
+                <div class="cont_logo">
+                    <a href="https://facebook.com/chiomaokafor" target="_blank"><img src="./FB.png" alt="facebook_logo" style="width: 35px;"></a>
+                    <a href="https://twitter.com/chummy" target="_blank"><img src="./TW.png" alt="twitter_logo" style="width: 35px;"></a>
+                    <a href="https://instagram.com/chiomaokafor" target="_blank"><img src="./IG.png" alt="instagram_logo" style="width: 27px; margin-bottom: 3px;"></a>
+                </div> 
+                
+            </div>
+                
+        </main>
+
+        <nav class="nav_sec">
+            <h4>CALL US</h4>
+            <p>+234-7012-345-678</p>
+            <p>+234-8112-345-678</p>
+            <h4>LOCATION</h4>
+            <p>USA, Texas, No. 2334, Ade St</p>
+            <h4>BUSINESS HOURS</h4>
+            <p>Mon - Fri .... 10am - 8pm</p>
+            <p>Sat, Sun .... Closed</p>
+            
+        </nav>
+        
+    </div>
+    
+
+
+
+</body>
+</html>

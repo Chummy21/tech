@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        .regbod {
+            width: 90%;
+            height: 800px;
+            background-color: #e4e4e4;
+            text-align: center;
+            margin: auto;
+            padding: auto;
+            font-family: monospace;
+            font-size: 15px;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        #binfo,#gender,#contr,#fName,#lsName,#pnumber,#country, #email, #password, #cpassword {
+            position: relative;
+            clear: left;
+        }
+
+        .regbod>header{
+            padding-top: 10px;
+        }
+
+        .home:hover{
+            animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+        @keyframes shake {
+
+            10%,
+            90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+
+            20%,
+            80% {
+                transform: translate3d(2px, 0, 0);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+
+            40%,
+            60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+
+        .home{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: monospace;
+        }
+
+        #home{
+            text-decoration: none;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="regbod">
+        <ul style="padding-left: 70%; margin-top: 20px;">
+            <button class="home"
+                style="background-color: #e4e4e4; border: 1px solid black; border-radius: 20px; display: inline; margin-top: 10px;"><a
+                    href="./index.html" target="_self">
+                    <li id="home" style="color: black;">HOME</li>
+                </a></button>
+        </ul>
+        <hr>
+        <header>
+            <h1>REGISTER</h1>
+        </header>
+        <form action="./index.html" method="get">
+            <div id="binfo">
+                <label for="fName">First Name</label><br>
+                <input type="text" name="fName" id="fName" required><br><br>
+                <label for="lsName">Last Name</label><br>
+                <input type="text" name="lsName" id="lsName" required><br><br>
+                <label for="pnumber">Phone Number</label><br>
+                <input type="tel" name="pnumber" placeholder="123-4567-890" id="pnumber" required maxlength="10"><br><br>
+            </div>
+            <div id="gender">
+                <label for="gender" style="display: block;">Gender</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br><br>
+            </div>
+            <div id="contr">
+                <label for="country">Country</label><br>
+                <input type="text" name="country" id="country" required><br><br>
+                <label for="state">State/Province</label><br>
+                <input type="text" name="state" id="state" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" required><br><br>
+                <label for="password">Password </label><br>
+                <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+                <label for="cpassword">Confirm Password </label><br>
+                <input type="password" name="cpassword" id="cpassword" required><br><br><br>
+            </div>
+            <input type="submit" name="reg" id="reg" value="Register">
+        </form>
+    </div>
+
+    <script>
+        var tele = document.querySelector('#pnumber');
+
+        tele.addEventListener('keyup', function (e) {
+            if (event.key != 'Backspace' && (tele.value.length === 3 || tele.value.length === 4)) {
+                tele.value += '-';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
